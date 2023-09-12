@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+     integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="contactuscss.css">
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p> ओळख गडकोटांची या उपक्रमाविषयी आपल्याला अधिक माहिती हवी असेल किंव्हा किल्ल्यांविषयी अधिक माहिती हवी असेल तर आपण खाली 
+                दिलेल्या नंबर वर संपर्क करू शकता. किंव्हा शेजारी असलेल्या फोर्म भरून आमच्याशी संपर्क करू शकता.
+            </p>
+        </div>
+       <div class="container">
+          <div class="contactInfo">
+            <div class="box">
+             <div class="icon"><i class="fa fa-map-marker"></i></div>
+             <div class="text">
+                <h3>Address</h3>
+                <p>आमराई कृषी व ग्रामीण पर्यटन केंद्र ठाकरवाडी,चास (माऊलींची),<br> तालुका :-आंबेगाव, पुणे, <br> महाराष्ट्र 412408</p>
+             </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                <div class="text">
+                   <h3>Phone</h3>
+                   <p>सागर हगवणे :- 9421013046 <br>
+                      संकेत रोकडे :- 8796536014 <br>
+                      ऋषिकेश ढुमणे :- 9561332370
+                   </p>
+                </div>
+               </div>
+               <div class="box">
+                <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                <div class="text">
+                   <h3>Email</h3>
+                   <p>olakhgadkotanchi@gmail.com</p>
+                </div>
+               </div>
+          </div>
+          <div class="contactForm">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" id="name" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="email" required="required">
+                    <span>Email Id</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="phone" required="required">
+                    <span>Mobile Number</span>
+                </div>
+                <div class="inputBox">
+                    <textarea required="required" id="message"></textarea>
+                    <span>Type Your Message.....</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="Send">
+                 </div>
+            </form>
+          </div>
+       </div>
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "rushidhumane12@gmail.com",
+                Password : "Bhakti97",
+                To : 'sanketrokade404@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Enquiry",
+                Body : "Name: " + document.getElementById("name").value
+                  + "<br> Email: "+ document.getElementById("email").value
+                  + "<br> Phone No: "+ document.getElementById("phone").value
+                  + "<br> Message: "+ document.getElementById("message").value
+                  
+
+              }).then(
+                message => alert("Message Sent Succesfully")
+            ); 
+        }
+    </script>
+</body>
+</html>

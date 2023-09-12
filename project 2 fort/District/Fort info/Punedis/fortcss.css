@@ -1,0 +1,25 @@
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(fort.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.fort{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+}
+h1{
+    font-size: 40px;
+}
+#rd5{
+    font-size: 22px;
+    font-weight: bold;
+}
+strong{
+    font-size: 27px;
+}
+.rd10{
+    margin-left: 65%;
+    font-size: 24px;
+}
